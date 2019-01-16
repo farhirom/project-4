@@ -1,0 +1,53 @@
+// ==========================================================================
+// Nav
+// ==========================================================================
+
+
+.nav{
+  @include flexy($dir: column);
+  @include mq("medium"){
+    flex-direction: row;
+    justify-content: center;
+  }
+
+}
+
+.nav__item{
+  @include mq("medium"){
+    margin-left: 5px;
+    margin-right: 5px;
+    flex: 0 100px ;
+  }
+}
+
+
+
+.nav {
+  &__item {
+    a{
+        padding-left: 4px;
+        padding-right: 4px;
+        font-weight: $font-weight--bold ;
+        text-align: center;
+        font-size: em(18px);
+        color: palette(black);
+        &:hover {
+          color: palette(grey);
+        }
+    }
+    &:first-child a{
+      background: $color-primary;
+      //border: 0;
+      border-radius : $br--default;
+      color: $white;
+      transition: opacity $trns-duration;
+      &:hover {
+        opacity: .75;
+      }
+      &:active {
+        opacity: initial;
+      }
+    }
+
+  }
+}

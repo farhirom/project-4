@@ -1,0 +1,56 @@
+
+.container{
+  width: 90%;
+  margin: auto;
+}
+.centered{
+  margin:auto;
+}
+
+
+.grid__row{
+  @include flexy($dir: column, $just: space-between);
+  @include mq("medium"){
+    flex-direction: row;
+  }
+}
+
+[class="grid__col--6"]{
+    @include flexy($align: center, $just:space-around);
+    margin-top: 20px;
+}
+
+[class="grid__col--12"]{
+  @include flexy($dir: column, $just:space-around);
+  @include mq("medium"){
+    flex-direction: row;
+  }
+}
+
+
+@for $i from 1 through $g-col-count {
+  @if(map-has-key($grid-colors, #{$i})){
+    [class^="grid__col--#{$i} theme__colors"]{
+      background: grid-color(#{$i});
+      text-align: center;
+      width: 100%;
+      @extend %btn;
+    }
+  }
+}
+
+@include mq("medium"){
+  @for $i from 1 through $g-col-count {
+    $context: g-context($g-col-width, $g-col-count ,$g-gutter-width);
+    $target: g-context($g-col-width, $i ,$g-gutter-width);
+
+    // Generate column modifier classes
+    .grid__col--#{$i} {
+      width:percentage($target / $context);
+    }
+  }
+}
+
+.grid__row:nth-last-of-type(n-7){
+  margin-bottom: 30px;
+}

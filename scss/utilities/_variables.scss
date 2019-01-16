@@ -1,0 +1,130 @@
+// ==========================================================================
+// Global Config
+// ==========================================================================
+
+// Font Stacks
+
+$font-url--google        : 'http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900';
+$font-family--primary    : 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family--secondary  : 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// Font Weights
+
+$font-weight--thin       : 100;
+$font-weight--light      : 300;
+$font-weight--medium     : 400;
+$font-weight--bold       : 700;
+$font-weight--ultra-bold : 900;
+
+// Descriptive Base Colors
+
+$white : #fff;
+$black : #0b0b0b;
+$grey  : #797e83;
+
+$malibu         : #50C7F7;
+$fountain-blue  : #52bab3;
+$emerald        : #5ece7f;
+$sunglo         : #e67478;
+$coral          : #ff784f;
+$purple-majesty : #9279c3;
+$scooter        : #39add1;
+
+// Color Usage
+
+$color-primary   : $fountain-blue;
+$color-secondary : $scooter;
+$color-accent    : $emerald;
+$color-shadow    : rgba($black, .2);
+
+// Color Palette Modifiers
+
+$color-palettes: (
+	grey: (
+		xx-light : lighten($grey, 43%),
+		x-light  : lighten($grey, 35%),
+	  light    : lighten($grey, 12%),
+	  base     : $grey,
+	 	dark     : darken($grey, 8%),
+	 	x-dark   : darken($grey, 16%)
+	),
+	black: (
+		light    : lighten($black, 10%),
+		base     : $black,
+		dark     : darken($black, 10%)
+	),
+	blue: (
+		light    : lighten($malibu, 10%),
+		base     : $malibu,
+		dark     : darken($malibu, 10%)
+	),
+	green: (
+		light    : lighten($emerald, 10%),
+		base     : $emerald,
+		dark     : darken($emerald, 10%)
+	),
+	red: (
+		light    : lighten($sunglo, 10%),
+		base     : $sunglo,
+		dark     : darken($sunglo, 10%)
+	),
+	orange: (
+		light    : lighten($coral, 10%),
+		base     : $coral,
+		dark     : darken($coral, 10%)
+	),
+	purple: (
+		light    : lighten($purple-majesty, 10%),
+		base     : $purple-majesty,
+		dark     : darken($purple-majesty, 10%)
+	)
+);
+
+
+$grid-colors: (
+							"3": (purple: light),
+							"4": (blue: light),
+							"5": (green: base),
+							"6": (blue: dark),
+							"7": (red: light),
+							"8": (orange: light),
+							"12": (green: light)
+						);
+
+// UI Colors
+
+$ui-colors: (
+	default : $malibu,
+	success : $emerald,
+	error   : $sunglo,
+	warning : $coral,
+	info    : $purple-majesty
+);
+
+// Text
+
+$base__font-size : 16px;
+$base__line      : 24px;
+$letter-space    : 1px;
+
+// Border radius
+
+$br--default    : .4em;
+$br--round      : 50%;
+
+// Transitions
+
+$trns-duration  : .3s;
+
+// Grid
+
+$g-col-width    : 65px;
+$g-gutter-width : 40px;
+$g-col-count    : 12;
+//$g-cont-max-w   : 1050px;
+
+// Breakpoints
+
+$brkpoint-sm    : 480px;
+$brkpoint-md    : 769px;
+$brkpoint-lg    : 1400px;

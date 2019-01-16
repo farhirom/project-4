@@ -1,0 +1,36 @@
+%btn {
+  padding: 15px 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 0;
+  border-radius : $br--default;
+  color: $white;
+  text-transform: uppercase;
+  font-size : em(14px);
+  font-weight: $font-weight--medium;
+  transition: opacity $trns-duration;
+  font-family: $font-family--primary;
+
+  &:hover {
+    opacity: .75;
+  }
+  &:active {
+    opacity: initial;
+  }
+}
+
+%hdln-prim {
+  color: $color-primary;//palette(grey, x-dark);
+  font-weight: $font-weight--bold; //$font-weight--light;
+  font-size: em(42px);
+  line-height: (46px/42px);
+  padding-left: 20px;
+}
+%hdln-sec {
+  color: palette(grey, light);
+  letter-spacing: $letter-space;
+  font-weight: $font-weight--thin;
+  font-size: em(18px);
+  font-family: $font-family--secondary;
+  margin-top: 0;
+}

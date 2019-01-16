@@ -1,0 +1,61 @@
+// Typography:
+// .container
+// .link
+// .blockquote
+// .headline--primary
+// .headline--secondary
+.form{
+  font-family: $font-family--primary;
+}
+
+
+.nav__item a,
+.grid__col--3 .link{
+  display: block;
+}
+
+.nav__item a{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.card{
+  font-family: $font-family--primary;
+	color: palette(grey, light);
+  a{
+    color: $malibu;
+    font-weight: $font-weight--bold;
+  	letter-spacing: $letter-space;
+  }
+  @media(min-width: 1400px){
+    max-width: 85%;
+  }
+}
+
+
+.headline {
+	&--primary {
+		@extend %hdln-prim;
+    font-family: $font-family--primary;
+		margin-bottom: em(70px, 42px);
+	}
+ 	&--secondary {
+		@extend %hdln-sec;
+    font-family: $font-family--secondary;
+    text-transform: uppercase;
+		margin-bottom: em(22px, 24px);
+	}
+
+}
+
+
+.blockquote{
+  font-style: italic;
+  font-weight: $font-weight--light;
+  font-size: 1.25em;
+  border-left: 10px solid $color-primary;
+  padding-left: 10px;
+  border-radius : $br--default;
+}
